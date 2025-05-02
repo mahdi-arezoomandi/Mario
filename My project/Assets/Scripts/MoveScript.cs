@@ -11,6 +11,8 @@ public class MoveScript : MonoBehaviour
     private bool isground = true;
     public float Jumpforce;
     public float Rate=3;
+    public Animator ANmove;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +22,16 @@ public class MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
+      
+
         Move = Input.GetAxis("Horizontal");
         Player.velocity = new Vector2(Move * speed, Player.velocity.y);
         
         if (Input.GetKeyDown(KeyCode.Space) && isground==true&& Timer<2)
         {
-            
+            ANmove.SetBool("isground", false);
             Player.velocity=new Vector2(Player.velocity.x,Jumpforce);
             Timer++;
             
@@ -36,12 +41,27 @@ public class MoveScript : MonoBehaviour
             isground = false;
             Timer = 0;
         }
-
+        if (Player.velocity.x > 0 || Player.velocity.x < 0)
+            ANmove.SetBool("static", false);
+        else
+            ANmove.SetBool("static", true);
+        flip();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
+        {
             isground = true;
+            ANmove.SetBool("isground", true);
+        }
+          
         
     }
-}
+    private void flip()
+    {
+        if (Player.velocity.x < 0)
+            transform.localScale = new Vector2(-1, 1);
+        else if(Player.velocity.x > 0)
+            transform.localScale = new Vector2(1, 1);
+    }      
+    }
