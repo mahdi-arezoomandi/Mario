@@ -9,6 +9,7 @@ public class MoveScript : MonoBehaviour
     public float Timer=0;
     private float Move;
     private bool isground = true;
+    private bool isStop= true;
     public float Jumpforce;
    
     public Animator ANmove;
@@ -23,39 +24,52 @@ public class MoveScript : MonoBehaviour
     void Update()
     {
 
-
       
+            if (Input.GetKeyDown(KeyCode.Space) && isground == true && Timer < 2)
+            {
+                ANmove.SetBool("isground", false);
+                Player.velocity = new Vector2(Player.velocity.x, Jumpforce);
+                Timer++;
 
-        Move = Input.GetAxis("Horizontal");
-        Player.velocity = new Vector2(Move * speed, Player.velocity.y);
+            }
+            if (Timer >= 2)
+            {
+                isground = false;
+                Timer = 0;
+            }
+            if (Player.velocity.x > 0 || Player.velocity.x < 0)
+                ANmove.SetBool("static", false);
+            else
+                ANmove.SetBool("static", true);
+            flip();
         
-        if (Input.GetKeyDown(KeyCode.Space) && isground==true&& Timer<2)
+    }
+    private void FixedUpdate()
+    {
+        if (isStop == false)
         {
-            ANmove.SetBool("isground", false);
-            Player.velocity=new Vector2(Player.velocity.x,Jumpforce);
-            Timer++;
-            
+
+
+            Move = Input.GetAxis("Horizontal");
+            Player.velocity = new Vector2(Move * speed, Player.velocity.y);
         }
-        if (Timer >= 2)
-        {
-            isground = false;
-            Timer = 0;
-        }
-        if (Player.velocity.x > 0|| Player.velocity.x < 0)
-            ANmove.SetBool("static", false);
-        else
-            ANmove.SetBool("static", true);
-        flip();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
         {
             isground = true;
+            isStop = false;
             ANmove.SetBool("isground", true);
         }
-          
+        if (collision.gameObject.CompareTag("Stop"))
+        {
+            isStop = true;
+
+        }
+       
         
+
     }
     private void flip()
     {
