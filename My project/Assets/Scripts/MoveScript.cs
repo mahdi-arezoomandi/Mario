@@ -10,7 +10,7 @@ public class MoveScript : MonoBehaviour
     private float Move;
     private bool isground = true;
     public float Jumpforce;
-    public float Rate=3;
+   
     public Animator ANmove;
   
     // Start is called before the first frame update
@@ -41,7 +41,7 @@ public class MoveScript : MonoBehaviour
             isground = false;
             Timer = 0;
         }
-        if (Player.velocity.x > 0 || Player.velocity.x < 0)
+        if (Player.velocity.x > 0|| Player.velocity.x < 0)
             ANmove.SetBool("static", false);
         else
             ANmove.SetBool("static", true);
