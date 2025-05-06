@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class TilseManager : MonoBehaviour
 {
-    public GameObject PowerUp;
-    public GameObject Ntilse;
+    public GameObject Mushroom;
+    public GameObject Flawor;
+    public GameObject Star;
+    public GameObject Coin;
 
     // Start is called before the first frame update
     void Start()

@@ -6,6 +6,11 @@ TagManager:
   tags:
   - ground
   - Stop
+  - Ntilse
+  - PowerUp
+  - Spowerup
+  - hideTilse
+  - SNtilse
   layers:
   - Default
   - TransparentFX

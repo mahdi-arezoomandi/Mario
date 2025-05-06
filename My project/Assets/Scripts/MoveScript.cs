@@ -13,6 +13,8 @@ public class MoveScript : MonoBehaviour
     public float Jumpforce;
    
     public Animator ANmove;
+    public Animator PowerUp;
+    public Animator Ntilse;
   
     // Start is called before the first frame update
     void Start()
@@ -54,9 +56,13 @@ public class MoveScript : MonoBehaviour
             
             ANmove.SetBool("isground", true);
         }
-       
-       
+        if (collision.gameObject.CompareTag("PowerUp") || collision.gameObject.CompareTag("Spowerup"))
+            PowerUp.SetBool("Active", true);
         
+        if (collision.gameObject.CompareTag("Ntilse") )
+            Ntilse.SetBool("Acive", true);
+        else
+            Ntilse.SetBool("Acive", false);
 
     }
     private void flip()
