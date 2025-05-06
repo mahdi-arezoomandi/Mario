@@ -9,7 +9,7 @@ public class MoveScript : MonoBehaviour
     public float Timer=0;
     private float Move;
     private bool isground = true;
-    private bool isStop= true;
+   
     public float Jumpforce;
    
     public Animator ANmove;
@@ -23,9 +23,10 @@ public class MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Move = Input.GetAxis("Horizontal");
+        Player.velocity = new Vector2(Move * speed, Player.velocity.y);
 
-      
-            if (Input.GetKeyDown(KeyCode.Space) && isground == true && Timer < 2)
+        if (Input.GetKeyDown(KeyCode.Space) && isground == true && Timer < 2)
             {
                 ANmove.SetBool("isground", false);
                 Player.velocity = new Vector2(Player.velocity.x, Jumpforce);
@@ -44,29 +45,16 @@ public class MoveScript : MonoBehaviour
             flip();
         
     }
-    private void FixedUpdate()
-    {
-        if (isStop == false)
-        {
-
-
-            Move = Input.GetAxis("Horizontal");
-            Player.velocity = new Vector2(Move * speed, Player.velocity.y);
-        }
-    }
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
         {
             isground = true;
-            isStop = false;
+            
             ANmove.SetBool("isground", true);
         }
-        if (collision.gameObject.CompareTag("Stop"))
-        {
-            isStop = true;
-
-        }
+       
        
         
 
