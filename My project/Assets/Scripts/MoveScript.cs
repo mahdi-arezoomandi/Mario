@@ -61,10 +61,10 @@ public class MoveScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ptriger") || collision.gameObject.CompareTag("Spowerup"))
+        if (collision.gameObject.CompareTag("PowerUP") || collision.gameObject.CompareTag("Spowerup"))
             PowerUp.SetBool("Active", true);
 
-        if (collision.gameObject.CompareTag("NTtriger"))
+        if (collision.gameObject.CompareTag("Ntilse"))
             Ntilse.SetBool("Acive", true);
         else
             Ntilse.SetBool("Acive", false);
