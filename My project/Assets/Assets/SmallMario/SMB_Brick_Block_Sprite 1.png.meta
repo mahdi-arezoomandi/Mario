@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4682119768b79b24693c6f18a6ae5a1c
+guid: 6723d209d91e2e146ba142ff7012b194
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,34 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SMB_Brick_Block_Sprite_0
+      name: SMB_Brick_Block_Sprite 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 30
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf6fe70725203b241b67bc6c31b65497
-      internalID: 1197418456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMB_Brick_Block_Sprite_1
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 1
         width: 32
-        height: 31
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +137,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c26f0e7a28bc88e49959f0be5a615608
-      internalID: -1172668138
+      spriteID: eb32a5859abbb2242b8d3773595d358c
+      internalID: 836168488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SMB_Brick_Block_Sprite 1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eee7e3d0cb79a349ae2bfac75f06c53
+      internalID: -1199197240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SMB_Brick_Block_Sprite 1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c081fb2cda1a140b994e646df4d1ac
+      internalID: -1966291180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SMB_Brick_Block_Sprite 1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd5c2e5748e08f49a9b82b0f7b1c871
+      internalID: 1007821741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SMB_Brick_Block_Sprite 1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b15bd1213c8e740994f11a00b784b1
+      internalID: 415652555
       vertices: []
       indices: 
       edges: []
@@ -175,8 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SMB_Brick_Block_Sprite_0: 1197418456
-      SMB_Brick_Block_Sprite_1: -1172668138
+      SMB_Brick_Block_Sprite 1_0: 836168488
+      SMB_Brick_Block_Sprite 1_1: -1199197240
+      SMB_Brick_Block_Sprite 1_2: -1966291180
+      SMB_Brick_Block_Sprite 1_3: 1007821741
+      SMB_Brick_Block_Sprite 1_4: 415652555
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

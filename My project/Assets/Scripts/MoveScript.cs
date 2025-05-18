@@ -56,15 +56,20 @@ public class MoveScript : MonoBehaviour
             
             ANmove.SetBool("isground", true);
         }
-        if (collision.gameObject.CompareTag("PowerUp") || collision.gameObject.CompareTag("Spowerup"))
+      
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ptriger") || collision.gameObject.CompareTag("Spowerup"))
             PowerUp.SetBool("Active", true);
-        
-        if (collision.gameObject.CompareTag("Ntilse") )
+
+        if (collision.gameObject.CompareTag("NTtriger"))
             Ntilse.SetBool("Acive", true);
         else
             Ntilse.SetBool("Acive", false);
-
     }
+    
     private void flip()
     {
         if (Player.velocity.x < 0)

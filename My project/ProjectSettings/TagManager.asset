@@ -11,6 +11,8 @@ TagManager:
   - Spowerup
   - hideTilse
   - SNtilse
+  - Ptriger
+  - NTtriger
   layers:
   - Default
   - TransparentFX
