@@ -61,15 +61,19 @@ public class MoveScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("PowerUP") || collision.gameObject.CompareTag("Spowerup"))
-            PowerUp.SetBool("Active", true);
+        if (collision.gameObject.CompareTag("Ptriger") || collision.gameObject.CompareTag("Spowerup"))
+            PowerUp.SetBool("Active1", true);
 
-        if (collision.gameObject.CompareTag("Ntilse"))
-            Ntilse.SetBool("Acive", true);
-        else
-            Ntilse.SetBool("Acive", false);
+        if (collision.gameObject.CompareTag("NTtriger"))
+            Ntilse.SetBool("active", true);
+        
     }
-    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("NTtriger"))
+            Ntilse.SetBool("active", false);
+    }
+
     private void flip()
     {
         if (Player.velocity.x < 0)
